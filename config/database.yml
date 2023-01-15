@@ -1,0 +1,22 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: mandobd
+  password: 123456
+  host: localhost
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: sock_shop_development
+
+test:
+  <<: *default
+  database: sock_shop_test
+
+production:
+  <<: *default
+  database: sock_shop_production
+  username: sock_shop
+  password: <%= ENV["SOCK_SHOP_DATABASE_PASSWORD"] %>
