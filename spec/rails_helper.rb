@@ -33,7 +33,7 @@ Shoulda::Matchers.configure do |config|
 end
 
 VCR.configure do |config|
-  config.cassete_library_dir = "fitures/vcr"
+  # config.cassete_library_dir = "fitures/vcr"
   config.hook_into :webmock
 end
 
