@@ -5,6 +5,10 @@ application up and running.
 
 Things you may want to cover:
 
+Ruby: 3.0.0
+Rails: 7.0.2+
+Node: 16+
+Yarn: 1.22+
 * Ruby version
 
 * System dependencies
