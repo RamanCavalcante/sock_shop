@@ -1,5 +1,5 @@
 class ProductPolicy < ApplicationPolicy
-    def new?
-      Category.count.positive?
-    end
+  def new?
+    Category.count.positive?
+  end
 end
