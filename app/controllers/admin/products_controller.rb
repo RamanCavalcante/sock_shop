@@ -1,17 +1,20 @@
 module Admin
   class ProductsController < BaseController
-    before_action :set_product, only: [:edit, :update, :show, :destory]
+    before_action :set_product, only: [:edit, :update, :show, :destroy]
 
     def index
       @products = Product.all
     end
 
     def edit
-      @product = Product.find(params:[id])
     end
 
     def new
       @product = Product.new
+      authorize @product
+    rescue Pundit::NotAuthorizedError
+      flash[:notice] = "you can only register a product if you already have a category registered"
+      redirect_to action: :index
     end
 
     def show
@@ -43,7 +46,7 @@ module Admin
       @product.destroy
 
       respond_to do |format|
-        format.html {redirect_to admin_products_path, notice:''}
+        format.html { redirect_to admin_products_path, notice: '' }
       end
     end
 

@@ -19,7 +19,7 @@
                 <td>
                   <%= link_to "Detail", admin_category_path(category), class: "btn btn-dark" %> |
                   <%= link_to "Edit", edit_admin_category_path(category), class: "btn btn-warning" %> |
-                  <%= button_to "Delete", admin_category_path(category), method: :delete, class: 'btn btn-danger', data: {turbo_method: :delete, turbo_confirm: 'Deseja realmente exlcuir?'} %>
+                  <%= button_to "Delete", admin_category_path(category), method: :delete, class: 'btn btn-danger', data: {turbo_method: :delete, turbo_confirm: 'Do you really want delete'} %>
                 </td>
               </tr>
               <% end %>
