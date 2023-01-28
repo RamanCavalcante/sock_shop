@@ -1,28 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este projeto foi criado em ruby on rails, um ecommerce com crud de produtos e usuários
 
-Things you may want to cover:
+# Configurando o sistema
+Para configurar o sistema no seu computador você precisa do ruby, node e yarn configurado no seu computador.
 
-Ruby: 3.0.0
-Rails: 7.0.2+
+Para ruby eu costumo usar o asdf como gerenciador de ruby e node. Mas você pode isntalar o gerenciador que estiver mais familiarizado.
+
+Ruby: 3.1.2
+Rails 7.0.2
 Node: 16+
 Yarn: 1.22+
-* Ruby version
+Libvips: https://installati.one/ubuntu/20.04/libvips-dev/
 
-* System dependencies
+Siga os passos abaixo para configurar o sistema no seu computador.
+1. Instalar todas as dependências assets: `yarn install`
+2. Instalar todas as dependências do rails (gems): `bundle install`
+3. Configure o arquivo `database.yml` que está na pasta config com seu usuário e senha.
+4. Com o banco de dados configurado gere os bancos: `rails db:create`
+5. Agora execute as migrações: `rails db:migrate`
+6. Fim
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Iniciando o projeto
+Agora com tudo configurado, basta executa `bin/dev`
