@@ -9,8 +9,9 @@
                 label: false,
                 placeholder: "Nome" %>
     <%= f.input :phone,
+                input_html: {class: "mask-phone"},
                 label: false,
-                placeholder: "Telefone" %>
+                placeholder: "Phone" %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,

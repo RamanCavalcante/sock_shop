@@ -3,6 +3,7 @@ module Admin
     before_action :set_product, only: [:edit, :update, :show, :destroy]
 
     def index
+      @products = Product.all
     end
 
     def edit
